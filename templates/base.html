@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Random_Code</title>
+
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- CSS -->
+        <style>
+                li {
+            margin-top: 10px;
+            }
+
+            div {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                background-color: aqua;
+            }
+
+            #pic {
+                margin-top: 65px;
+            }
+
+            body {
+                background-color: aqua;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="mx-auto text-center">
+            <button onclick="scrape()">Scrape</button>
+        </div>
+        <div class="container d-flex h-100 align-items-center">
+            <div class="row">
+                <div class="col">
+                    <p id="pic"></p>
+                </div>
+                <div class="col">
+                    <div class="overflow-auto" style="max-width: 600px; max-height: 500px;">
+                        <ul id="tweets"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <!-- Javascript -->
+    <script src="../static/clientScrape.js"></script>
+
+</html>
