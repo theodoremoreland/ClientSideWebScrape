@@ -1,5 +1,8 @@
 function scrape() {
-
+    
+    
+    try {document.getElementById("legit_tweets").innerHTML = "";}
+    catch {}
     var profile;
     var response;
 
@@ -44,6 +47,7 @@ function scrape() {
         // console.log(img);
 
             if (profile != null) {
+                document.getElementById("legitimize").innerHTML = '<button onclick="legitimize(' + "'" + profile + "'" + ')">Legitimize</button>';
                 document.getElementById("tweets").innerHTML = "";
                 document.getElementById("pic").innerHTML = "<img src=" + img + "> <br> <a href='https://twitter.com/" + profile + "' target='_blank'>Twitter</a>";
             }
@@ -57,4 +61,15 @@ function scrape() {
                 document.getElementById("tweets").appendChild(li);           // Append <li> to <ul> with id="tweets"
            })
     }
+  }
+
+
+  function legitimize(profile) {
+        document.getElementById("tweets").innerHTML = '';
+        document.getElementById("legit_tweets").innerHTML = '<a class="twitter-timeline" data-height="500" data-theme="dark" data-link-color="#F5F8FA" href="https://twitter.com/' + profile + '?ref_src=twsrc%5Etfw">Tweets by ' + profile + '</a>';
+        var script= document.createElement('script');
+        script.setAttribute("async", "");
+        script.src= "https://platform.twitter.com/widgets.js";
+        script.charset= "utf-8";
+        legit_tweets.appendChild(script);
   }

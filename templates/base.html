@@ -13,8 +13,13 @@
 
         <!-- CSS -->
         <style>
+
+                button {
+                margin-right: 200px;
+            }
+
                 li {
-            margin-top: 10px;
+                margin-top: 10px;
             }
 
             div {
@@ -38,6 +43,9 @@
         <div class="mx-auto text-center">
             <button onclick="scrape()">Scrape</button>
         </div>
+        <div class="mx-auto text-center" id="legitimize">
+
+        </div>
         <div class="container d-flex h-100 align-items-center">
             <div class="row">
                 <div class="col">
@@ -47,10 +55,12 @@
                     <div class="overflow-auto" style="max-width: 600px; max-height: 500px;">
                         <ul id="tweets"></ul>
                     </div>
+                    <div id="legit_tweets" style="width: 600px; height: 500px;"></div>
                 </div>
             </div>
         </div>
 
+        <!-- <a class="twitter-timeline" data-height="600" data-theme="dark" data-link-color="#F5F8FA" href="https://twitter.com/ashleyelisa4?ref_src=twsrc%5Etfw">Tweets by ashleyelisa4</a> -->
     </body>
 
     <!-- Javascript -->
